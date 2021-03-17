@@ -10002,3 +10002,17 @@ h3 {
     border-color: #dee2e6;
   }
 }
+
+.error {
+  color: red;
+}
+.logo {
+  max-width: 200px;
+}
+button[type=submit] {
+  margin-top: 10px;
+}
+.index {
+  display: inline-block;
+  transform: translateY(-5px);
+}

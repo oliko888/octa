@@ -58,6 +58,15 @@
                                 </a>
 
                                 <div class="dropdown-menu dropdown-menu-right" aria-labelledby="navbarDropdown">
+
+                                    <a class="dropdown-item" href="{{ route('company.index') }}">
+                                        {{ __('Companies') }}
+                                    </a>
+                                   
+                                    <a class="dropdown-item" href="{{ route('employee.index') }}">
+                                        {{ __('Employees') }}
+                                    </a>
+                                                                        
                                     <a class="dropdown-item" href="{{ route('logout') }}"
                                        onclick="event.preventDefault();
                                                      document.getElementById('logout-form').submit();">
