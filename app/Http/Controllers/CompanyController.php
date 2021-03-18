@@ -40,6 +40,7 @@ class CompanyController extends Controller
     {
         $validatedData = $request->validate([
             'name' => 'required|max:255',
+            'email' => 'unique:companies,email',
             'logoUpload' => 'dimensions:min_width=100,min_height=100'
         ]);
 
