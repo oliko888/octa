@@ -24,12 +24,12 @@
                                 <th scope="row">{{ $c->id }}</th>
                                 <td><a href="{{ route('company.show', ['company' => $c->id]) }}">{{ $c->name }}</a></td>
                                 <td>
-                                    <span><a href="{{ route('company.edit', ['company' => $c->id]) }}"><button type="button" class="btn btn-outline-secondary btn-sm">Edit</button></a></span>     
-                                        <form action="{{ route('company.destroy', ['company' => $c->id]) }}" method="POST" class="index">
-                                            @method('DELETE')
-                                            @csrf
-                                            <button type="submit" class="btn btn-outline-danger btn-sm">Delete</button>
-                                        </form>
+                                    <a href="{{ route('company.edit', ['company' => $c->id]) }}"><button type="button" class="btn btn-outline-secondary btn-sm">Edit</button></a>   
+                                    <form action="{{ route('company.destroy', ['company' => $c->id]) }}" method="POST" class="index">
+                                        @method('DELETE')
+                                        @csrf
+                                        <button type="submit" class="btn btn-outline-danger btn-sm" onclick="return confirm('Are you sure?')">Delete</button>
+                                    </form>
                                 </td>
                             </tr>
                         @endforeach
