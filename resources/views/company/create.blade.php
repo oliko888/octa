@@ -15,13 +15,13 @@
                 <div class="form-group">
                     <label>Email address:</label>
                     <input name="email" type="email" class="form-control" placeholder="Enter email" value="{{ old('email') }}">
+                    @error('email') <span class="error">{{ $message }}</span> @enderror
                 </div>
                 
                 <div class="form-group">
                     <label>Website:</label>
                     <input name="website" type="text" class="form-control" placeholder="Enter website" value="{{ old('website') }}">
                 </div>
-
 
                 <label>Upload Logo:</label>
                 <div class="form-group">

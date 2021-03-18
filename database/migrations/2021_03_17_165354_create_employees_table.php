@@ -17,10 +17,13 @@ class CreateEmployeesTable extends Migration
             $table->id();
             $table->string('first_name');
             $table->string('last_name');
-            $table->foreignId('company_id')->constrained();
-            $table->string('email')->unique();
-            $table->string('phone');
+            $table->unsignedBigInteger('company_id')->nullable();
+            $table->string('email')->unique()->nullable();
+            $table->string('phone')->nullable();
             $table->timestamps();
+            $table->softDeletes();
+
+            $table->foreign('company_id')->references('id')->on('companies');
         });
     }
 

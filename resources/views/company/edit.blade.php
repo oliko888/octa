@@ -15,6 +15,7 @@
                 <div class="form-group">
                     <label>Email address:</label>
                     <input name="email" type="email" class="form-control" placeholder="Enter email" value="{{ $company->email }}">
+                    @error('email') <span class="error">{{ $message }}</span> @enderror
                 </div>
                 
                 <div class="form-group">
